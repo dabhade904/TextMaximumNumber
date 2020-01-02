@@ -48,4 +48,22 @@ public class TestMaximumTest {
         float input=testMaximum.getThreeFloatInput(10.11f,20.33f,30.11f);
         Assert.assertEquals(30.11f,input,0.0);
     }
+    @Test
+    public void whenGivenStringMaxNumber_IfFirstPosition_ShouldReturnSameNumber(){
+        String input=testMaximum.getThreeStringInput("Apple","Peach","Banana");
+        Assert.assertEquals("Peach",input);
+    }
+
+    @Test
+    public void whenGivenStringMaxNumber_IfSecondPosition_ShouldReturnSameNumber(){
+        String input=testMaximum.getThreeStringInput("Peach","Apple","Banana");
+        Assert.assertEquals("Peach",input);
+    }
+
+    @Test
+    public void whenGivenStringMaxNumber_IfThirdPosition_ShouldReturnSameNumber(){
+        String input=testMaximum.getThreeStringInput("Aople","Banana","Peach");
+        Assert.assertEquals("Peach",input);
+    }
+
 }

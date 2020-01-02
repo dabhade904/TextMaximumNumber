@@ -22,6 +22,17 @@ public class TestMaximum {
             max = thirdNumber;
         }
         return max;
-
     }
+
+    public String getThreeStringInput(String firstString, String secondString, String thirdString) {
+        String max=firstString;
+        if(secondString.compareTo(max)>0) {
+            max = secondString;
+        }
+        if (thirdString.compareTo(max)>0) {
+            max = thirdString;
+        }
+        return max;
+    }
+
 }
