@@ -33,36 +33,36 @@ public class TestMaximumTest {
 
     @Test
     public void whenGivenFloatMaxNumber_IfFirstPosition_ShouldReturnSameNumber(){
-        float input=testMaximum.getThreeFloatInput(30.11f,20.33f,10.33f);
+        float input=testMaximum.getThreeInput(30.11f,20.33f,10.33f);
         Assert.assertEquals(30.11f,input,0.0);
     }
 
     @Test
     public void whenGivenFloatMaxNumber_IfSecondPosition_ShouldReturnSameNumber(){
-        float input=testMaximum.getThreeFloatInput(20.55f,30.11f,10.33f);
+        float input=testMaximum.getThreeInput(20.55f,30.11f,10.33f);
         Assert.assertEquals(30.11f,input,0.0);
     }
 
     @Test
     public void whenGivenFloatMaxNumber_IfThirdPosition_ShouldReturnSameNumber(){
-        float input=testMaximum.getThreeFloatInput(10.11f,20.33f,30.11f);
+        float input=testMaximum.getThreeInput(10.11f,20.33f,30.11f);
         Assert.assertEquals(30.11f,input,0.0);
     }
     @Test
     public void whenGivenStringMaxNumber_IfFirstPosition_ShouldReturnSameNumber(){
-        String input=testMaximum.getThreeStringInput("Apple","Peach","Banana");
+        String input=testMaximum.getThreeInput("Apple","Peach","Banana");
         Assert.assertEquals("Peach",input);
     }
 
     @Test
     public void whenGivenStringMaxNumber_IfSecondPosition_ShouldReturnSameNumber(){
-        String input=testMaximum.getThreeStringInput("Peach","Apple","Banana");
+        String input=testMaximum.getThreeInput("Peach","Apple","Banana");
         Assert.assertEquals("Peach",input);
     }
 
     @Test
     public void whenGivenStringMaxNumber_IfThirdPosition_ShouldReturnSameNumber(){
-        String input=testMaximum.getThreeStringInput("Aople","Banana","Peach");
+        String input=testMaximum.getThreeInput("Aople","Banana","Peach");
         Assert.assertEquals("Peach",input);
     }
 
