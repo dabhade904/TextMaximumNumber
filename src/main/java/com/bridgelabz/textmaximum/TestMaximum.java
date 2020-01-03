@@ -1,29 +1,23 @@
 package com.bridgelabz.textmaximum;
 
+import java.util.Arrays;
+
 public class TestMaximum <T extends Comparable>{
-    T firstElement;
-    T secondElement ;
-    T thirdElement;
+    T [] myArray;
 
-  public TestMaximum(T firstElement,T secondElement,T thirdElement){
-        this.firstElement=firstElement;
-        this.secondElement=secondElement;
-        this.thirdElement=thirdElement;
-    }
+  public TestMaximum(T...value){
 
-    public static  <T extends Comparable> T getThreeInput(T firstElement,T secondElement,T thirdElement) {
-        T max=firstElement;
-        if(secondElement.compareTo(max)>0) {
-            max = secondElement;
-        }
-        if (thirdElement.compareTo(max)>0) {
-            max =thirdElement;
-        }
-        return max;
+    T[] array=(T[])new Comparable[value.length];
+    int i=0;
+    for(T c:value){
+        array[i]=c;
+        i++;
     }
+    this.myArray=array;
+  }
 
     public T findMaxValue(){
-      T maximum=getThreeInput(firstElement,secondElement,thirdElement);
-      return maximum;
+        Arrays.sort(myArray);
+      return myArray[myArray.length-1];
     }
 }

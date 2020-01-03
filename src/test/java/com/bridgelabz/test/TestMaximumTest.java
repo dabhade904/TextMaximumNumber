@@ -88,4 +88,11 @@ public class TestMaximumTest {
         Comparable comparable = testMaximum.findMaxValue();
         Assert.assertEquals("superman",comparable);
     }
+
+    @Test
+    public void toTestMaximum_ByPassingNumber_UsingOption() {
+        TestMaximum<Integer> testMaximum = new TestMaximum<>(10, 20, 30, 500, 70);
+        Comparable comparable = testMaximum.findMaxValue();
+        Assert.assertEquals(500,comparable);
+    }
 }
